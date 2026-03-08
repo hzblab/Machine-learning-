@@ -12,7 +12,7 @@ drive.mount('/content/drive')
 
 import pandas as pd
 import numpy as np
-path = "/content/drive/MyDrive/Academia/bank-full.csv"
+path = "/content/####/####/####/bank-full.csv"
 df = pd.read_csv(path, sep=";")
 print(df.shape)
 df.head()
