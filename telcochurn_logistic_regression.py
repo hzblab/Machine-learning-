@@ -11,7 +11,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 import pandas as pd
-path = "/content/drive/MyDrive/Academia/Telco-Customer-Churn.csv"
+path = "/content/####/####/####/Telco-Customer-Churn.csv"
 df = pd.read_csv(path)
 df.head(5)
 
