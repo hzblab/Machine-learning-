@@ -1,0 +1,31 @@
+# Bank Marketing Logistic Regression from Scratch
+
+## Objective
+The goal of this project was to build a binary logistic regression model from scratch using NumPy to predict whether a customer would subscribe to a term deposit.
+
+## Workflow
+- Loaded and inspected the Bank Marketing dataset
+- Converted the target variable (`yes` / `no`) into binary form
+- Identified numeric and categorical features
+- Applied one-hot encoding to categorical columns
+- Split the dataset into training and test sets
+- Standardized features using training-set statistics only
+- Implemented logistic regression from scratch with gradient descent
+- Tuned the classification threshold to optimize F1 score
+
+## Results
+### Best threshold
+- **0.22**
+
+### Best performance
+- **F1 score:** 0.5773
+- **Precision:** 0.5376
+- **Recall:** 0.6232
+
+### Performance at default threshold (0.5)
+- **F1 score:** 0.4429
+- **Precision:** 0.6480
+- **Recall:** 0.3365
+
+## Conclusion
+The model achieved a solid baseline performance and showed that threshold tuning was essential due to class imbalance. This project demonstrates a full end-to-end implementation of logistic regression without using built-in machine learning models.
