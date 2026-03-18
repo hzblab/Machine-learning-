@@ -12,7 +12,7 @@ drive.mount('/content/drive')
 
 import pandas as pd
 import numpy as np
-path = "/content/####/####/####/bank-full.csv"
+path = "/content/drive/MyDrive/Cookbook/bank-full.csv"
 df = pd.read_csv(path, sep=";")
 print(df.shape)
 df.head()
@@ -142,6 +142,18 @@ def fit_logreg(X_train_s, y_train, lr=0.1, iters=2000):
 w, b, losses = fit_logreg(X_train_s, y_train, lr=0.1, iters=2000)
 print("first 3:", losses[:3])
 print("last 3:", losses[-3:])
+
+# 5) Evaluate
+import matplotlib.pyplot as plt
+
+# Plot training loss history
+iters = np.arange(len(losses)) * 100
+plt.figure()
+plt.plot(iters, losses)
+plt.xlabel("Iteration")
+plt.ylabel("Logistic Loss (train)")
+plt.title("Training Loss (Logistic Loss) over Iterations")
+plt.show()
 
 p_test = sigmoid(X_test_s @ w + b)  # shape (m_test,)
 
